@@ -131,6 +131,8 @@ if st.session_state.processed:
             prompt = f"""
 Answer ONLY using the provided context.
 
+Format the answer using bullet points and headings.
+
 If the answer is not found, reply:
 Information not found in uploaded documents.
 
@@ -146,7 +148,7 @@ Question:
             answer = response.text
 
         st.subheader("Answer")
-        st.write(answer)
+        st.markdown(answer)
 
         st.subheader("Source Pages")
 
